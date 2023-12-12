@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/Usmankhaan/Project', branch: 'main'
+                git url: 'https://github.com/Muavia099/aws-assignemnt.git', branch: 'main'
             }
         }
         stage('Build') {
@@ -23,8 +23,8 @@ pipeline {
                     publishers: [
                         sshPublisherDesc(
                             configName: 'MyUbuntuServer',
-                            transfers: [sshTransfer(sourceFiles: '*/', remoteDirectory: '/home/ubuntu/myapp')],
-                            execCommand: 'python /home/ubuntu/python/test.py'
+                            transfers: [sshTransfer(sourceFiles: '*/', remoteDirectory: '/myapp')],
+                
                         )
                     ]
                 )
