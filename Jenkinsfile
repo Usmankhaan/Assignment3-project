@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/Usmankhaan/Project.git', branch: 'main'
+                git url: 'https://github.com/Usmankhaan/Project', branch: 'main'
             }
         }
         stage('Build') {
@@ -31,4 +31,3 @@ pipeline {
             }
         }
     }
-}
