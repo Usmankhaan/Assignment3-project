@@ -22,7 +22,7 @@ pipeline {
                 sshPublisher(
                     publishers: [
                         sshPublisherDesc(
-                            configName: 'Jenkins_server',
+                            configName: 'jenkins-u',
                             transfers: [sshTransfer(sourceFiles: '*/', remoteDirectory: '/myapp')],
                 
                         )
