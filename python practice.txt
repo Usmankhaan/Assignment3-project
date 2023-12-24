@@ -1,6 +1,0 @@
-num=int(input("enter a number:"))
-b=2
-if num%b==0:
-    print("even")
-else:
-    print("odd")
