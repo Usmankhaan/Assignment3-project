@@ -19,13 +19,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying..'
-                sshPublisher(
-                    publishers: [
-                        sshPublisherDesc(
-                            configName: 'Jenkins_server',
-                            transfers: [sshTransfer(sourceFiles: '*/', remoteDirectory: '/myapp')],
-                
-                        )
+               
                     ]
                 )
             }
