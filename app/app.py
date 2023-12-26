@@ -9,7 +9,7 @@ def hello_world():
         <head>
             <style>
                 body {
-                    background-color: #f0f0f0;
+                    background-color: #f5f5f5;
                     font-family: 'Arial', sans-serif;
                     margin: 0;
                     display: flex;
@@ -39,7 +39,7 @@ def hello_world():
 
                 input[type="text"], input[type="password"] {
                     width: 100%;
-                    padding: 10px;
+                    padding: 12px;
                     margin: 8px 0;
                     display: inline-block;
                     border: 1px solid #ccc;
@@ -55,25 +55,79 @@ def hello_world():
                     border-radius: 5px;
                     cursor: pointer;
                     font-size: 16px;
+                    width: 100%;
                 }
 
                 input[type="submit"]:hover {
                     background-color: #45a049;
                 }
+
+                .form-group {
+                    margin-bottom: 20px;
+                }
+
+                .form-group::after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+
+                .form-group label {
+                    float: left;
+                    width: 30%;
+                }
+
+                .form-group input {
+                    float: left;
+                    width: 70%;
+                }
+
+                .form-group:last-child {
+                    margin-bottom: 0;
+                }
+
+                .link {
+                    text-align: center;
+                    margin-top: 20px;
+                }
+
+                .link a {
+                    color: #007bff;
+                    text-decoration: none;
+                }
+
             </style>
         </head>
         <body>
             <div class="container">
                 <h2>Signup Form</h2>
                 <form>
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
 
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
 
                     <input type="submit" value="Sign Up">
                 </form>
+
+                <div class="link">
+                    Already have an account? <a href="#">Login</a>
+                </div>
             </div>
         </body>
         </html>
