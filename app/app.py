@@ -1,7 +1,6 @@
-
 from flask import Flask
 
-app = Flask(__name__)
+app = Flask(_name_)
 
 @app.route('/')
 def login_form():
@@ -105,12 +104,12 @@ def login_form():
                 <form>
                     <div class="form-group">
                         <label for="username">Name:</label>
-                        <input type="text" id="username" name="username" required>
+                        <input type="text" id="username" name="username" value="Muhammad Usman" required>
                     </div>
 
                     <div class="form-group">
                         <label for="registration-number">Registration Number:</label>
-                        <input type="text" id="registration-number" name="registration-number" required>
+                        <input type="text" id="registration-number" name="registration-number" value="fa19-bcs-124" required>
                     </div>
 
                     <input type="submit" value="Login">
@@ -124,5 +123,5 @@ def login_form():
         </html>
     '''
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     app.run(debug=True, host='0.0.0.0')
