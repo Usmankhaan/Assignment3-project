@@ -1,34 +1,50 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask
 
-app = Flask(__name__)
-
-# Placeholder for user data (replace with a database in a real application)
-users = {
-    'user1': {'name': 'John Doe', 'registration_number': '12345'},
-    'user2': {'name': 'Jane Doe', 'registration_number': '67890'}
-}
+app = Flask(_name_)
 
 @app.route('/')
-def login_form():
-    return render_template('login_form.html')
+def hello_world():
+    return '''
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Sample Web App</title>
+            <style>
+                body {
+                    text-align: center;
+                    font-family: Arial, sans-serif;
+                }
+                header {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 10px;
+                }
+                footer {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 10px;
+                    position: fixed;
+                    bottom: 0;
+                    width: 100%;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>Sample Web App</h1>
+            </header>
+            
+            <p>Hello! I am Usman from BCS8.</p>
+            
+            <footer>
+                &copy; 2023 Sample Web App
+            </footer>
+        </body>
+        </html>
+    '''
 
-@app.route('/login', methods=['POST'])
-def login():
-    username = request.form['username']
-    registration_number = request.form['registration-number']
-
-    # Check if the provided credentials match any user in the database
-    for user, data in users.items():
-        if data['name'] == username and data['registration_number'] == registration_number:
-            # Redirect to the welcome page with the user's name
-            return redirect(url_for('welcome', username=username))
-
-    # If no match, redirect back to the login form
-    return redirect(url_for('login_form'))
-
-@app.route('/welcome/<username>')
-def welcome(username):
-    return render_template('welcome.html', username=username)
-
-if __name__ == '__main__':
+if _name_ == '_main_':
     app.run(debug=True, host='0.0.0.0')
