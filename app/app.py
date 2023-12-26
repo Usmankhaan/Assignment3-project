@@ -3,7 +3,7 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
+def login_form():
     return '''
         <html>
         <head>
@@ -48,7 +48,7 @@ def hello_world():
                 }
 
                 input[type="submit"] {
-                    background-color: #4caf50;
+                    background-color: #007bff;
                     color: white;
                     padding: 12px 20px;
                     border: none;
@@ -59,7 +59,7 @@ def hello_world():
                 }
 
                 input[type="submit"]:hover {
-                    background-color: #45a049;
+                    background-color: #0056b3;
                 }
 
                 .form-group {
@@ -100,33 +100,23 @@ def hello_world():
         </head>
         <body>
             <div class="container">
-                <h2>Signup Form</h2>
+                <h2>Login Form</h2>
                 <form>
                     <div class="form-group">
-                        <label for="username">Username:</label>
+                        <label for="username">Name:</label>
                         <input type="text" id="username" name="username" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="text" id="email" name="email" required>
+                        <label for="registration-number">Registration Number:</label>
+                        <input type="text" id="registration-number" name="registration-number" required>
                     </div>
 
-                    <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="confirm-password">Confirm Password:</label>
-                        <input type="password" id="confirm-password" name="confirm-password" required>
-                    </div>
-
-                    <input type="submit" value="Sign Up">
+                    <input type="submit" value="Login">
                 </form>
 
                 <div class="link">
-                    Already have an account? <a href="#">Login</a>
+                    Don't have an account? <a href="#">Sign Up</a>
                 </div>
             </div>
         </body>
