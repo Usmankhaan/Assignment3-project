@@ -59,7 +59,7 @@ def login_form():
                 }
 
                 input[type="submit"]:hover {
-                    background-color: #0056b3;
+                    background-color: #0036b3;
                 }
 
                 .form-group {
@@ -100,16 +100,16 @@ def login_form():
         </head>
         <body>
             <div class="container">
-                <h2>Login Form update</h2>
+                <h2>Login Form </h2>
                 <form>
                     <div class="form-group">
                         <label for="username">Name:</label>
-                        <input type="text" id="username" name="username" required value="Muhammad Usman">
+                        <input type="text" id="username" name="username" required value="Ahmed Bilal">
                     </div>
 
                     <div class="form-group">
                         <label for="registration-number">Registration Number:</label>
-                        <input type="text" id="registration-number" name="registration-number" required value="FA19-BCS-124">
+                        <input type="text" id="registration-number" name="registration-number" required value="sp20-bcs-019">
                     </div>
 
                     <input type="submit" value="Login">
