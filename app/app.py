@@ -104,12 +104,12 @@ def login_form():
                 <form>
                     <div class="form-group">
                         <label for="username">Name:</label>
-                        <input type="text" id="username" name="username" required value="Ahmed Bilal">
+                        <input type="text" id="username" name="username" required value="Muhammad Usman">
                     </div>
 
                     <div class="form-group">
                         <label for="registration-number">Registration Number:</label>
-                        <input type="text" id="registration-number" name="registration-number" required value="sp20-bcs-019">
+                        <input type="text" id="registration-number" name="registration-number" required value="fa19-bcs-124">
                     </div>
 
                     <input type="submit" value="Login">
